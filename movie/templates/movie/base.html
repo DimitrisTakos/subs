@@ -1,10 +1,179 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EEDET47930"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EEDET47930');
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/movie.css' %}">
+  <link rel="stylesheet" href="{% static 'css/images.css' %}">
+  <title>Perceptron Subs</title>
+  <style>
+      .button {
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    background: #1b6d85;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Arial Black", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+      .button:hover {
+          background: #008168;
+      }
+      .button:active {
+          background: #006e58;
+      }
+
+      .button__text,
+      .button__icon {
+          display: inline-flex;
+          align-items: center;
+          padding: 0 24px;
+          color: #fff;
+          height: 100%;
+      }
+      .button__icon {
+          font-size: 1.5em;
+          background: rgba(0, 0, 0, 0.08);
+      }
+      .container {
+          height: 200px;
+      }
+  </style>
 </head>
 <body>
+<!-- Κύριο μέρος -->
+ <div>
+    <img src="{% static "css/Perceptron.jpg"%}" alt="logo" width="300px" height="168px" class="logo">
+ </div>
+<div class="header"><h1>Καλωσορίσατε στο site!</h1>
+</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 bg-white text-black">
+        <h2 style="color:darkslateblue;">Υπότιτλοι για κατέβασμα!&#128229;</h2>
+{% for posts in posts %}
+    <p style="font-size: large"><b>Τίτλος: {{ posts.header }}</b></p>
+    <p>
+           {% if posts.image %}<img src="{{ posts.image.url }}" alt="wildcards" width="300px" height="168px"/>
+           {% endif %}
+    </p>
+    <p style="font-size: large"><b>Περίληψη: {{ posts.text}}</b></p>
+    <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ posts.production_date }}</b></p>
+    <p style="font-size: large"><b>Διάρκεια: {{ posts.duration }}</b></p>
+    <p style="font-size: large"><b>Βαθμολογία: {{ posts.grade }}</b></p>
+    <p style="font-size: large"><b>Κατέβασμα υποτίτλου:</b>
+    </p>
+    <button type="button" class="button">
+    <a class="button__text" href="{% url 'download_cheatsheet' posts.id %}">Download</a>
+    <ion-icon class="button__icon" name="cloud-download-outline"></ion-icon></button>
+{% endfor %}
+    </div>
+    <div class="col-sm-4"><p style="font-size: larger"><b>Καλώς ήρθατε στον απόλυτο προορισμό για υπότιτλους!<br>
+    Εδώ θα βρείτε μια συλλογή από υπότιτλους για ταινίες και σειρές,<br>
+    για να απολαύσετε την αγαπημένη σας ψυχαγωγία χωρίς περιορισμούς.<br>
+    Το εύχρηστο site επιτρέπει να αναζητήσετε<br>
+    και να κατεβάσετε υπότιτλους εύκολα και γρήγορα.<br>
+    Είτε είστε σινεφίλ, είτε λάτρης των σειρών και των ταινιών,<br>
+    εδώ βρίσκεται ο κατάλληλος υπότιτλος για εσάς.<br>
+    Εξερευνήστε τη συλλογή μου και ξεκινήστε την περιπέτεια της ψυχαγωγίας με υπότιτλους!</b><br>
+    </p>
+    <p style="font-size: large"><b>Έτοιμος για κατέβασμα!</b></p>
+    <img src="{% static "css/movie1.jpg" %}" alt="movie1" class="movie1">
+    <p style="font-size: large"><b>Trailer:</b></p>
+        <iframe width="580" height="400" src="https://www.youtube.com/embed/Idh8n5XuYIA">
+             </iframe><br>
+    <p style="font-size: large"><b>Πρόοδος μετάφρασης:</b></p>
+    <progress value="100" max="100">100%</progress><p style="font-size: large"><b>100%</b></p>
+    <p style="font-size: large"><b>Σύνδεσμος ταινίας: (Πρέπει να έχετε ενεργοποιημένο το VPN)</b></p>
+        <a href="https://katcr.to/deadpool-and-wolverine-2024-1080p-no-ads-x264-hdts-english-aac-xdark-moviesup-t6173120.html"><b>Deadpool & Wolverine</b></a>
+        <p style="font-size: large"><b>Υπότιτλος υπό μετάφραση:</b></p>
+    <p style="font-size: large"><b> Wild Cards Season 1 Episode 5</b></p>
+    <p style="font-size: large"><b>The Accountant of Monte Cristo</b></p>
+    <img src="{% static 'css/wildcards.jpg' %}" alt="wild cards" class="wildcards">
+    <p style="font-size: large"><b>Πρόοδος μετάφρασης</b></p>
+    <progress value="90" max="100">90%</progress><p style="font-size: large"><b>50%</b></p>
+    <p style="font-size: large"><b>Σύντομα μετάφραση νέας σειράς</b></p>
+    <img src="{% static 'css/Series1.jpg' %}" alt="Tattooist" class="tatto">
+
+    </div>
+    <div class="col-sm-4"><h3 class="heading-text">Αναβάθμιση του site:</h3>
+        <p style="font-size: large"><b>Έκδοση 1.0:Ρύθμιση ώστε να τραβάει το ανέβασμα των σειρών ο web browser από την βάση δεδομένων.</b>
+        <p style="font-size: large"><b>Έκδοση 1.1:Έγιναν κάποια αλλαγές στην βάση δεδομένων.</b>
+        <p style="font-size: large"><b>Έκδοση 1.2:Έγινε πιο όμορφο και λειτουργικό το κουμπί Download.</b>
+        <p style="font-size: large"><b>Έκδοση 1.3:Έγιναν κάποιες αλλαγές στο carousel για να είναι πιο λειτουργικό.</b>
+        </p>
+         <h2>Το τραγούδι της εβδομάδας:</h2>
+         <p></p>
+             <iframe width="480" height="400" src="https://www.youtube.com/embed/ItqZUFLasKw">
+             </iframe>
+        <p><a href='old'><h3>Αρχείο Υποτίτλων</h3></a></p>
+    </div>
+  </div>
+</div>
+
+ <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+    <!--        <li data-target="#myCarousel" data-slide-to="2"></li> -->
+        </ol>
+
+         <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+         <div class="item active">
+            <img src="{% static "images/wildcards.jpg" %}" alt="wildcards" style="width:640px; height:480px;">
+            <div class="carousel-caption">
+               <h3>Wild Cards</h3>
+            </div>
+         </div>
+
+        <div class="item">
+        <img src="{% static "images/DeadpoolandWolverine.jpg" %}" alt="DeadpoolandWolverine" style="width:640px; height:480px;">
+        <div class="carousel-caption">
+          <h3>Deadpool & Wolverine</h3>
+        </div>
+      </div>
+
+        <!--<div class="item">-->
+        <!--<img src="{% static "" %}" alt="roswell" style="width:640px; height:480px;">-->
+      <!--  <div class="carousel-caption"> -->
+          <footer>
+           <p><b>θα χαρώ πολύ να λάβω σχόλια, παρατηρήσεις ή προτάσεις στο email:</b>
+           <a href="perceptronsubsforall@gmail.com"><b style="font-size: large">perceptronsubsforall@gmail.com</b></a></p>
+          </footer>
+    </div>
+ </div>
+
+
+{% block content %}
+    {% endblock %}
+
+
+
+<!-- load -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
