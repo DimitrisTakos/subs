@@ -8,22 +8,6 @@ body {
     border-radius: 50%;
 }
 
-.carousel-inner {
-    position: relative;
-    left: 250px;
-}
-
-.carousel-caption {
-    position: relative;
-    left: -0230px;
-    top: -0125px;
-    color: floralwhite;
-}
-
-.carousel-indicators {
-    top: 455px;
-    left: 585px;
-}
 
 .header {
     position: relative;
@@ -33,10 +17,4 @@ body {
 .head {
     position: relative;
     left: 850px;
-}
-
-.container {
-    position: relative;
-    top: 250px;
-    left: 25px;
 }

@@ -35,6 +35,3 @@ def cheatsheet(request):
 
 def old(request):
     return render(request, 'movie/secondpage.html', {})
-
-
-# Create your views here.

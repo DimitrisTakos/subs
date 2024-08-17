@@ -68,7 +68,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3 bg-white text-black">
+    <div class="col-sm-4 bg-white text-black">
         <h2 style="color:darkslateblue;">Υπότιτλοι για κατέβασμα!&#128229;</h2>
 {% for posts in posts %}
     <p style="font-size: large"><b>Τίτλος: {{ posts.header }}</b></p>
@@ -80,6 +80,7 @@
     <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ posts.production_date }}</b></p>
     <p style="font-size: large"><b>Διάρκεια: {{ posts.duration }}</b></p>
     <p style="font-size: large"><b>Βαθμολογία: {{ posts.grade }}</b></p>
+    <p style="font-size: large"><b>Downloads: {{ posts.download_count }}</b></p>
     <p style="font-size: large"><b>Κατέβασμα υποτίτλου:</b>
     </p>
     <button type="button" class="button">
@@ -87,7 +88,7 @@
     <ion-icon class="button__icon" name="cloud-download-outline"></ion-icon></button>
 {% endfor %}
     </div>
-    <div class="col-sm-5"><p style="font-size: larger"><b>Καλώς ήρθατε στον απόλυτο προορισμό για υπότιτλους!<br>
+    <div class="col-sm-4"><p style="font-size: larger"><b>Καλώς ήρθατε στον απόλυτο προορισμό για υπότιτλους!<br>
     Εδώ θα βρείτε μια συλλογή από υπότιτλους για ταινίες και σειρές,<br>
     για να απολαύσετε την αγαπημένη σας ψυχαγωγία χωρίς περιορισμούς.<br>
     Το εύχρηστο site επιτρέπει να αναζητήσετε<br>
@@ -96,13 +97,23 @@
     εδώ βρίσκεται ο κατάλληλος υπότιτλος για εσάς.<br>
     Εξερευνήστε τη συλλογή μου και ξεκινήστε την περιπέτεια της ψυχαγωγίας με υπότιτλους!</b><br>
     </p>
-    <p style="font-size: large"><b>Η μετάφραση του πρώτου επεισοδίου βγήκε!</b></p>
+    <p style="font-size: large"><a href='old'><h3>Παλιοί υπότιτλοι</h3></a></p>
     <img src="{% static 'css/Series1.jpg' %}" alt="Tattooist" class="tatto">
     <p style="font-size: large"><b>Trailer:</b></p>
         <iframe width="580" height="400" src="https://www.youtube.com/embed/xWD93s8ZD9g">
-             </iframe>
+        </iframe>
+    <p style="font-size: large"><b>Σύντομα προς το βραδάκι</b></p>
+    <img src="{% static 'css/thewayhome.jpg' %}" alt="home">
+    <p style="font-size: large"><b>Trailer:</b></p>
+        <iframe width="580" height="400" src="https://www.youtube.com/embed/4mkCV1wucew">
+        </iframe>
+    <footer>
+           <p style="font-size: large"><b>Θα χαρώ πολύ να λάβω σχόλια, παρατηρήσεις ή προτάσεις στο email:</b>
+           <a href="perceptronsubsforall@gmail.com"><b style="font-size: large">perceptronsubsforall@gmail.com</b></a></p>
+    </footer>
+
     </div>
-    <div class="col-sm-3"><h3 class="heading-text">Αναβάθμιση του site:</h3>
+    <div class="col-sm-4"><h3 class="heading-text">Αναβάθμιση του site:</h3>
         <p style="font-size: large"><b>Έκδοση 1.0:Ρύθμιση ώστε να τραβάει το ανέβασμα των σειρών ο web browser από την βάση δεδομένων.</b>
         <p style="font-size: large"><b>Έκδοση 1.1:Έγιναν κάποια αλλαγές στην βάση δεδομένων.</b>
         <p style="font-size: large"><b>Έκδοση 1.2:Έγινε πιο όμορφο και λειτουργικό το κουμπί Download.</b>
@@ -111,55 +122,18 @@
         </p>
          <h2>Το τραγούδι της εβδομάδας:</h2>
          <p></p>
-             <iframe width="480" height="400" src="https://www.youtube.com/embed/ItqZUFLasKw">
+             <iframe width="480" height="400" src="https://www.youtube.com/embed/vWxAi7F6otE">
              </iframe>
-        <p><a href='old'><h3>Αρχείο Υποτίτλων</h3></a></p>
     </div>
   </div>
 </div>
 
- <div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-         <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-         <div class="item active">
-            <img src="{% static "images/wildcards.jpg" %}" alt="wildcards" style="width:640px; height:480px;">
-            <div class="carousel-caption">
-               <h3></h3>
-            </div>
-         </div>
-
-        <div class="item">
-        <img src="{% static "images/deadpoolandwolverine.jpg" %}" alt="deadpoolandWolverine" style="width:640px; height:480px;">
-        <div class="carousel-caption">
-          <h3></h3>
-        </div>
-      </div>
-
-        <div class="item">
-        <img src="{% static "images/thetattoistofauschwitz.jpg" %}" alt="roswell" style="width:640px; height:480px;">-->
-        <div class="carousel-caption">
-   </div>
- </div>
-
-          <footer>
-           <p><b>θα χαρώ πολύ να λάβω σχόλια, παρατηρήσεις ή προτάσεις στο email:</b>
-           <a href="perceptronsubsforall@gmail.com"><b style="font-size: large">perceptronsubsforall@gmail.com</b></a></p>
-          </footer>
 
 
 
-{% block content %}
 
-{% endblock %}
+
+
 
 
 
