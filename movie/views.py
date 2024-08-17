@@ -33,5 +33,5 @@ def cheatsheet(request):
     return render(request, 'movie/base.html', context)
 
 
-def old(request):
-    return render(request, 'movie/secondpage.html', {})
+def page2(request):
+    return render(request, 'movie/second_page.html', {})

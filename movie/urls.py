@@ -8,7 +8,7 @@ urlpatterns = [
     path('', views.cheatsheet, name="cheatsheet"),
     path('download/<int:cheatsheet_id>/',
          views.download_cheatsheet, name='download_cheatsheet'),
-    path('old/', views.old, name='old'),
+    path('page2/', views.page2, name='page2'),
 ]
 
 
