@@ -1,5 +1,5 @@
 from django.utils import timezone
-from .models import Post
+from .models import Post, Old
 from .models import Cheatsheet
 from django.http import FileResponse
 from django.shortcuts import get_object_or_404
@@ -35,3 +35,8 @@ def cheatsheet(request):
 
 def page2(request):
     return render(request, 'movie/second_page.html', {})
+
+
+def wildcards(request):
+    cards = Old.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'movie/third_page.html', {'cards': cards})
