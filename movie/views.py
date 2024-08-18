@@ -38,5 +38,4 @@ def page2(request):
 
 
 def wildcards(request):
-    cards = Old.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'movie/third_page.html', {'cards': cards})
+    return render(request, 'movie/third_page.html', {})
