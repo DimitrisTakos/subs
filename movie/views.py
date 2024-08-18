@@ -9,7 +9,6 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-
 def base(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'movie/base.html', {'posts': posts})
@@ -39,3 +38,9 @@ def page2(request):
 
 def wildcards(request):
     return render(request, 'movie/third_page.html', {})
+
+
+def season_1_wildcards(request):
+    cards = Old.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'movie/fourth_page.html', {'cards': cards})
+
