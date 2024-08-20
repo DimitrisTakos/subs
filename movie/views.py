@@ -1,5 +1,5 @@
 from django.utils import timezone
-from .models import Post, Old
+from .models import Post, Old, Mov
 from .models import Cheatsheet
 from django.http import FileResponse
 from django.shortcuts import get_object_or_404
@@ -44,3 +44,10 @@ def season_1_wildcards(request):
     cards = Old.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'movie/fourth_page.html', {'cards': cards})
 
+
+def movie(request):
+    movies = Mov.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'movie/fifth_page.html', {'movies': movies})
+
+def movies2024(request):
+    return render(request, 'movie/fifth_page.html', context={})
