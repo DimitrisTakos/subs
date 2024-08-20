@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script
-    <title>Ταινίες 2024</title>
+    <title>Τhe Tattooist of Auschwitz</title>
     <style>
       .button {
     display: inline-flex;
@@ -50,20 +50,20 @@
 <div>
     <img src="{% static "css/Perceptron.jpg"%}" alt="logo" width="300px" height="168px" class="logo">
 </div>
-{% for movies in movies %}
-    <p style="font-size: large"><b>Τίτλος: {{ movies.header }}</b></p>
+{% for tattoos in tattoos %}
+    <p style="font-size: large"><b>Τίτλος: {{ tattoos.header }}</b></p>
     <p>
-           {% if movies.image %}<img src="{{ movies.image.url }}" alt="wildcards" width="300px" height="168px"/>
+           {% if tattoos.image %}<img src="{{ tattoos.image.url }}" alt="wildcards" width="300px" height="168px"/>
            {% endif %}
     </p>
-    <p style="font-size: large"><b>Περίληψη: {{ movies.text }}</b></p>
-    <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ movies.production_date }}</b></p>
-    <p style="font-size: large"><b>Διάρκεια: {{ movies.duration }}</b></p>
-    <p style="font-size: large"><b>Βαθμολογία: {{ movies.grade }}</b></p>
+    <p style="font-size: large"><b>Περίληψη: {{ tattoos.text }}</b></p>
+    <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ tattoos.production_date }}</b></p>
+    <p style="font-size: large"><b>Διάρκεια: {{ tattoos.duration }}</b></p>
+    <p style="font-size: large"><b>Βαθμολογία: {{ tattoos.grade }}</b></p>
     <p style="font-size: large"><b>Κατέβασμα υποτίτλου:</b>
     </p>
     <button type="button" class="button">
-    <a class="button__text" href="{% url 'download_cheatsheet' movies.id %}">Download</a>
+    <a class="button__text" href="{% url 'download_cheatsheet' tattoos.id %}">Download</a>
     <ion-icon class="button__icon" name="cloud-download-outline"></ion-icon></button>
 {% endfor %}
 

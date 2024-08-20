@@ -12,6 +12,8 @@ urlpatterns = [
     path('page2/wildcards/', views.wildcards, name='wildcards'),
     path('page2/wildcards/season_1_wildcards/', views.season_1_wildcards, name='season_1_wildcards'),
     path('page2/movies2024/', views.movies2024, name='movies2024'),
+    path('page2/thetattooist/', views.thetattooist, name='thetattooist'),
+
 ]
 
 
